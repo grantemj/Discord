@@ -4,7 +4,7 @@
 
 const fs = require('fs');
 const Discord = require('discord.js');
-const { prefix, token } = require('./config.json');
+const prefix = require('./config.json');
 
 require('dotenv').config();
 
@@ -37,4 +37,4 @@ client.on('message', message => {
     }
 });
 
-client.login(botToken)
+client.login(process.env.EGGBOT_TOKEN)
